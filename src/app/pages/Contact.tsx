@@ -1,8 +1,17 @@
 import { motion } from "motion/react";
 import { Mail, Phone, Send, Heart, Instagram, Linkedin, MapPin, Clock } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { sanityClient } from "../../sanityClient";
 
 export default function Contact() {
+  const [contactData, setContactData] = useState<any>(null);
+
+  useEffect(() => {
+    sanityClient.fetch('*[_type == "contact"][0]').then((data) => {
+      if (data) setContactData(data);
+    }).catch(console.error);
+  }, []);
+
   const [formData, setFormData] = useState({
     name: "", email: "", phone: "", interest: "", message: "",
   });
@@ -62,7 +71,7 @@ export default function Contact() {
             className="lg:col-span-2 space-y-10"
           >
             <div>
-              <h2 className="text-4xl text-stone-800 mb-6 font-light">Let's Connect</h2>
+              <h2 className="text-4xl text-stone-800 mb-6 font-light">{contactData?.heading || "Let's Connect"}</h2>
               <p className="text-stone-500 leading-relaxed text-lg font-light">
                 Whether you're curious about our offerings, ready to book a session, or exploring 
                 collaboration opportunities, we're here. Reach out and let's see what wants to bloom.
@@ -71,9 +80,9 @@ export default function Contact() {
 
             <div className="space-y-5">
               {[
-                { icon: Mail, label: "Email", content: "info@arohaarts.com", href: "mailto:info@arohaarts.com", color: "#8E270E" },
-                { icon: Phone, label: "Phone", content: "(555) 123-4567", href: "tel:+15551234567", color: "#798C6C" },
-                { icon: Clock, label: "Hours", content: "Mon–Fri, 9am–6pm", href: "#", color: "#F1B75F" },
+                { icon: Mail, label: "Email", content: contactData?.email || "info@arohaarts.com", href: `mailto:${contactData?.email || "info@arohaarts.com"}`, color: "#8E270E" },
+                { icon: Phone, label: "Phone", content: contactData?.phone || "(555) 123-4567", href: `tel:${contactData?.phone || "+15551234567"}`, color: "#798C6C" },
+                { icon: MapPin, label: "Location", content: contactData?.address || "Mumbai, India", href: contactData?.mapLink || "#", color: "#F1B75F" },
               ].map((item, index) => {
                 const IconComponent = item.icon;
                 return (

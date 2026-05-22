@@ -1,9 +1,19 @@
 import { motion } from "motion/react";
 import { Link } from "react-router";
 import { ArrowRight, User, Building2, Users, Mountain } from "lucide-react";
+import { useEffect, useState } from "react";
+import { sanityClient, urlFor } from "../../sanityClient";
 
 export default function Offerings() {
-  const offerings = [
+  const [sanityOfferings, setSanityOfferings] = useState<any[]>([]);
+
+  useEffect(() => {
+    sanityClient.fetch('*[_type == "offering"]').then((data) => {
+      setSanityOfferings(data);
+    }).catch(console.error);
+  }, []);
+
+  const defaultOfferings = [
     {
       id: 1,
       title: "Individuals",
@@ -42,6 +52,17 @@ export default function Offerings() {
       color: "#8E270E",
     },
   ];
+
+  const offerings = sanityOfferings.length > 0 ? sanityOfferings.map((o, idx) => ({
+    id: o._id,
+    title: o.title,
+    icon: idx === 0 ? User : idx === 1 ? Building2 : idx === 2 ? Users : Mountain,
+    description: o.description,
+    subsections: o.subsections,
+    image: o.image ? urlFor(o.image).url() : "https://images.unsplash.com/photo-1616013719351-d77dd6fdadbd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGFydCUyMHRoZXJhcHklMjBtaW5kZnVsJTIwY3JlYXRpbmd8ZW58MXx8fHwxNzc1NzIyNDY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    link: o.link || "/home/offerings",
+    color: o.color || "#8E270E",
+  })) : defaultOfferings;
 
   return (
     <div className="bg-white">
