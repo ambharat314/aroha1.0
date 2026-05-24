@@ -163,21 +163,6 @@ export default function Welcome() {
             <img src={logo} alt="Aroha Expressive Arts" className="w-full h-full object-cover rounded-full" />
           </div>
         </motion.div>
-
-        {/* Tagline */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 1.2 }}
-          className="text-white/80 text-lg md:text-xl font-light tracking-wide mb-12 text-center max-w-md"
-          style={{
-            textShadow: "0 2px 12px rgba(0,0,0,0.4)",
-            fontFamily: "var(--font-primary)",
-          }}
-        >
-          
-        </motion.p>
-
         {/* Enter Button */}
         <motion.button
           initial={{ opacity: 0, y: 30 }}
