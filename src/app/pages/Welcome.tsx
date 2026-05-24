@@ -159,8 +159,8 @@ export default function Welcome() {
               />
             </svg>
           </div>
-          <div className="relative">
-            <img src={logo} alt="Aroha Expressive Arts" className="w-64 h-64 md:w-72 md:h-72 object-contain" />
+          <div className="relative rounded-full overflow-hidden w-64 h-64 md:w-72 md:h-72 flex items-center justify-center bg-white shadow-lg">
+            <img src={logo} alt="Aroha Expressive Arts" className="w-full h-full object-cover rounded-full" />
           </div>
         </motion.div>
 
@@ -204,21 +204,6 @@ export default function Welcome() {
           />
           <span className="relative z-10">ENTER</span>
         </motion.button>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.6 }}
-          transition={{ delay: 3, duration: 1 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <ChevronDown className="w-6 h-6 text-white/60" />
-          </motion.div>
-        </motion.div>
       </motion.div>
     </div>
   );
