@@ -333,32 +333,7 @@ export default function MainLayout() {
       </AnimatePresence>
 
       {/* Footer */}
-      <footer className="relative mt-24 overflow-hidden">
-        {/* Organic wave separator */}
-        <div className="relative h-24 -mb-1">
-          <svg
-            viewBox="0 0 1440 120"
-            className="absolute bottom-0 w-full h-full"
-            preserveAspectRatio="none"
-          >
-            <defs>
-              <linearGradient id="wave-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#292524" />
-                <stop offset="100%" stopColor="#1c1917" />
-              </linearGradient>
-            </defs>
-            <path
-              d="M0,60 C240,90 480,20 720,50 C960,80 1200,30 1440,60 L1440,120 L0,120 Z"
-              fill="url(#wave-gradient)"
-            />
-            <path
-              d="M0,80 C360,100 720,40 1080,70 C1260,85 1380,65 1440,75 L1440,120 L0,120 Z"
-              fill="#292524"
-              opacity="0.6"
-            />
-          </svg>
-        </div>
-
+      <footer className="relative mt-24 overflow-hidden border-t border-stone-200">
         <div className="bg-stone-800 py-16 text-white">
           {/* Decorative organic shapes */}
           <div className="absolute -top-20 -left-20 w-80 h-80 bg-[#798C6C]/8 rounded-full blur-3xl" />
