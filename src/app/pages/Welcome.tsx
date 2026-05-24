@@ -175,7 +175,7 @@ export default function Welcome() {
             fontFamily: "var(--font-primary)",
           }}
         >
-          Where heart meets art, healing begins
+          
         </motion.p>
 
         {/* Enter Button */}
