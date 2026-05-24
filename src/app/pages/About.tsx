@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { useEffect } from "react";
 import { Heart, Leaf, Users, Palette, Move, PenLine, Music } from "lucide-react";
 import logo from "figma:asset/91c1f4056b8afb06da9b380f44ed2fc27d4346d0.png";
+import vasviProfile from "../../assets/vasvi.jpg";
 
 export default function About() {
   useEffect(() => {
@@ -351,7 +352,7 @@ export default function About() {
               <div className="absolute -inset-3 bg-gradient-to-br from-[#F1B75F]/20 to-[#8E270E]/15 rounded-[2rem] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               <div className="relative overflow-hidden rounded-3xl shadow-lg group-hover:shadow-2xl transition-shadow duration-500">
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHdvbWFuJTIwcHJvZmVzc2lvbmFsJTIwd2FybXxlbnwxfHx8fDE3NzU3MjI0NjV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                  src={vasviProfile}
                   alt="Vasvi - Expressive Arts Therapist"
                   className="w-full h-[600px] object-cover group-hover:scale-105 transition-transform duration-700"
                 />
