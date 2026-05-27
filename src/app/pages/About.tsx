@@ -216,12 +216,43 @@ export default function About() {
                 <div className={`absolute inset-0 bg-gradient-to-b ${value.bgColor} rounded-3xl transform group-hover:scale-[1.02] transition-transform duration-300`} />
                 <div className="relative p-10 text-center">
                   <motion.div
-                    whileHover={{ rotate: [0, -10, 10, 0] }}
-                    transition={{ duration: 0.5 }}
-                    className="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-6 shadow-lg"
-                    style={{ backgroundColor: value.color }}
+                    animate={{
+                      y: [0, -6, 0],
+                      borderRadius: index === 0 
+                        ? ["60% 40% 30% 70% / 60% 30% 70% 40%", "40% 60% 70% 30% / 50% 60% 40% 50%", "60% 40% 30% 70% / 60% 30% 70% 40%"]
+                        : index === 1
+                        ? ["40% 60% 70% 30% / 50% 60% 40% 50%", "50% 50% 30% 70% / 50% 60% 40% 60%", "40% 60% 70% 30% / 50% 60% 40% 50%"]
+                        : ["50% 50% 30% 70% / 50% 60% 40% 60%", "60% 40% 30% 70% / 60% 30% 70% 40%", "50% 50% 30% 70% / 50% 60% 40% 60%"]
+                    }}
+                    whileHover={{ 
+                      scale: 1.1,
+                      rotate: [0, -10, 10, 0],
+                      transition: { duration: 0.5 }
+                    }}
+                    transition={{
+                      y: {
+                        duration: 5 + index,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: index * 0.5
+                      },
+                      borderRadius: {
+                        duration: 8 + index * 2,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: index * 0.3
+                      }
+                    }}
+                    className="inline-flex items-center justify-center w-24 h-24 mb-6 relative overflow-hidden"
+                    style={{
+                      background: `linear-gradient(135deg, ${value.color}, ${
+                        index === 0 ? "#b23e24" : index === 1 ? "#95ac86" : "#f7cf94"
+                      })`,
+                      boxShadow: `0 12px 24px -10px ${value.color}c0, inset 0 -4px 10px rgba(0,0,0,0.15), inset 0 4px 10px rgba(255,255,255,0.25)`,
+                    }}
                   >
-                    <value.icon size={32} className="text-white" />
+                    <div className="absolute inset-0 bg-white/15 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                    <value.icon size={36} className="text-white relative z-10 filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]" />
                   </motion.div>
                   <h3 className="text-2xl text-stone-800 mb-4 font-light tracking-wide">{value.title}</h3>
                   <p className="text-stone-600 leading-relaxed">{value.description}</p>
@@ -333,13 +364,13 @@ export default function About() {
       </section>
 
       {/* Collaborations Marquee */}
-      <section className="py-16 bg-white overflow-hidden">
+      <section className="py-16 bg-stone-50 border-y border-stone-100 overflow-hidden">
         <div className="container mx-auto px-6 mb-10 text-center">
           <h3 className="text-3xl text-stone-800 font-light">Past Collabs</h3>
         </div>
         <div className="relative w-full overflow-hidden flex">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10" />
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-stone-50 to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-stone-50 to-transparent z-10" />
           
           <motion.div
             animate={{ x: ["0%", "-50%"] }}
