@@ -9,7 +9,7 @@ export default function Events() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1746905162688-e8f38e0137d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxib3RhbmljYWwlMjBnYXJkZW4lMjBwbGFudHMlMjBzb2Z0JTIwbGlnaHR8ZW58MXx8fHwxNzc1NzIyNDY1fDA&ixlib=rb-4.1.0&q=80&w=1080')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1503264116251-35a269479413?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDF8YWxsfHx8fHx8fHx8MTY5Njg0MTg2MA&ixlib=rb-4.1.0&q=80&w=1080')`,
           }}
         >
           <div className="absolute inset-0 bg-stone-900/60" />
@@ -46,7 +46,7 @@ export default function Events() {
 
           <div className="bg-white rounded-3xl shadow-lg overflow-hidden">
             <iframe
-              src="https://lu.ma/embed-checkout/YOUR_LUMA_CALENDAR_ID"
+              src="https://lu.ma/embed-checkout/aroha-events-calendar"
               width="100%"
               height="800"
               style={{ border: 'none', borderRadius: '1.5rem' }}

@@ -13,6 +13,7 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import FontPreview from "./pages/FontPreview";
 import ErrorBoundary from "./components/ErrorBoundary";
+import ExpressiveArtsTherapy from "./pages/ExpressiveArtsTherapy";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +33,7 @@ export const router = createBrowserRouter([
     children: [
       { path: "", element: <About /> },
       { path: "about", element: <About /> },
+      { path: "expressive-arts-therapy", element: <ExpressiveArtsTherapy /> },
       { path: "offerings", element: <Offerings /> },
       { path: "offerings/individuals", element: <Individuals /> },
       { path: "offerings/organisations", element: <Organisations /> },
