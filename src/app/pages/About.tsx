@@ -364,7 +364,7 @@ export default function About() {
                 ].map((company, index) => (
                   <div key={index} className="w-56 h-24 flex items-center justify-center shrink-0 mx-8">
                     {company.type === "image" ? (
-                      <img src={company.src} alt={company.alt} className="max-w-full max-h-full object-contain" />
+                      <img src={company.src} alt={company.alt} className="max-w-full max-h-full object-contain mix-blend-multiply" />
                     ) : (
                       <span className="text-xl text-stone-400 font-medium tracking-wide text-center">
                         {company.name}
