@@ -68,15 +68,7 @@ export default function About() {
           transition={{ duration: 1 }}
           className="relative z-10 text-center text-white px-6 max-w-4xl"
         >
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.3, type: "spring" }}
-            className="inline-flex items-center gap-2 px-5 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-8"
-          >
-            <Leaf size={16} className="text-[#F1B75F]" />
-            <span className="text-sm tracking-wider uppercase text-white/80">Our Story</span>
-          </motion.div>
+
           <h1 className="text-6xl md:text-7xl mb-6 font-light tracking-wide">About Aroha</h1>
           <p className="text-xl md:text-2xl text-[#F1B75F]/80 font-light italic">
             From roots to bloom, from heart to healing
