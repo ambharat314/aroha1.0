@@ -96,9 +96,9 @@ export default function MainLayout() {
               <motion.div
                 whileHover={{ rotate: [0, -5, 5, 0] }}
                 transition={{ duration: 0.5 }}
-                className="w-14 h-14"
+                className="w-14 h-14 bg-white rounded-full p-1.5 shadow-sm border border-stone-200/50 flex items-center justify-center overflow-hidden"
               >
-                <img src={logo} alt="Aroha" className="w-full h-full object-contain" />
+                <img src={logo} alt="Aroha" className="w-full h-full object-contain rounded-full" />
               </motion.div>
             </div>
             <div className="hidden sm:block">
@@ -344,7 +344,9 @@ export default function MainLayout() {
               {/* Brand Column */}
               <div className="md:col-span-2">
                 <div className="flex items-center gap-3 mb-6">
-                  <img src={logo} alt="Aroha" className="h-16 w-16 object-contain opacity-90" />
+                  <div className="h-16 w-16 bg-white rounded-full p-2 flex items-center justify-center shadow-md border border-stone-700/30 overflow-hidden shrink-0">
+                    <img src={logo} alt="Aroha" className="w-full h-full object-contain rounded-full" />
+                  </div>
                   <div>
                     <div className="text-xl font-light" style={{ fontFamily: "var(--font-primary)" }}>Aroha</div>
                     <div className="text-xs text-stone-400 tracking-[0.15em] uppercase">Expressive Arts</div>
