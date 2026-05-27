@@ -261,14 +261,14 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="md:col-span-2 relative group"
+              className="md:col-span-2 relative group flex justify-center items-center"
             >
-              <div className="absolute -inset-3 bg-gradient-to-br from-[#F1B75F]/20 to-[#8E270E]/15 rounded-[2rem] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <div className="relative overflow-hidden rounded-3xl shadow-lg group-hover:shadow-2xl transition-shadow duration-500">
+              <div className="absolute -inset-3 bg-gradient-to-br from-[#F1B75F]/20 to-[#8E270E]/15 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="relative overflow-hidden rounded-full aspect-square w-72 h-72 md:w-96 md:h-96 shadow-lg group-hover:shadow-2xl transition-shadow duration-500 border-4 border-white">
                 <img
                   src={vasviProfile}
                   alt="Vasvi - Expressive Arts Therapist"
-                  className="w-full h-[600px] object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
             </motion.div>
