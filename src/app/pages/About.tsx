@@ -99,74 +99,64 @@ export default function About() {
             <p className="text-stone-500 text-lg font-light">The meaning behind the name</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-5 gap-12 items-center mb-20 bg-gradient-to-br from-white to-amber-50/30 p-8 md:p-12 rounded-3xl shadow-lg border border-stone-100">
+          <div className="block bg-gradient-to-br from-white to-amber-50/30 p-8 md:p-12 rounded-3xl shadow-lg border border-stone-100 mb-20 flow-root">
             <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="md:col-span-3"
-            >
-              <div className="space-y-6 text-stone-600 leading-relaxed text-lg">
-                <p>
-                  <span className="text-[#F1B75F] font-accent text-2xl">Aroha</span>, a word from the Māori language, is often translated as love—<br />
-                  but its meaning runs deeper.<br />
-                  It speaks of a relational way of being—<br />
-                  one that holds compassion, empathy, presence, and an affectionate connection with oneself, others, and the world.
-                </p>
-                <p>
-                  Aroha is not just something we feel;<br />
-                  it is something we live.
-                </p>
-                <p>
-                  In Sanskrit, a resonant parallel emerges in āroha (आरोह)—<br />
-                  meaning ascent, rising, or an upward movement.<br />
-                  A quiet unfolding.<br />
-                  A becoming.
-                </p>
-                <p className="text-stone-700 font-medium">
-                  Together, these meanings hold a shared essence:<br />
-                  a movement of the heart—<br />
-                  towards connection, towards compassion, towards light.
-                </p>
-                <p>
-                  The expressive arts offer a natural pathway for this unfolding.<br />
-                  They speak in a language beyond words—<br />
-                  engaging the body, the senses, the emotions, and the imagination.
-                </p>
-                <p>
-                  Through image, movement, sound, and form,<br />
-                  they allow what is often unseen or unspoken<br />
-                  to find expression—safely, and with care.<br />
-                  In this expression, something begins to transform.
-                </p>
-                <p className="italic text-stone-500 mt-8">
-                  Or as Stephen K. Levine writes,<br />
-                  “Expression is itself transformation. This is the message art brings.”
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="md:col-span-2 relative flex items-center justify-center"
+              className="float-none md:float-right md:ml-12 mb-8 md:mb-6 flex items-center justify-center relative w-full md:w-80 h-80 mx-auto"
             >
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
-                className="absolute w-80 h-80"
+                className="absolute inset-0"
               >
                 <svg viewBox="0 0 200 200" className="w-full h-full">
                   <circle cx="100" cy="100" r="95" fill="none" stroke="rgba(241,183,95,0.15)" strokeWidth="0.5" strokeDasharray="3 6" />
                 </svg>
               </motion.div>
-              <div className="w-64 h-64 flex items-center justify-center rounded-full overflow-hidden bg-white shadow-lg border border-stone-100 p-2">
+              <div className="w-60 h-60 flex items-center justify-center rounded-full overflow-hidden bg-white shadow-lg border border-stone-100 p-2 relative z-10">
                 <img src={logo} alt="Aroha Expressive Arts" className="w-full h-full object-contain rounded-full" />
               </div>
             </motion.div>
+
+            <div className="text-stone-600 leading-relaxed text-lg space-y-6">
+              <p>
+                <span className="text-[#F1B75F] font-accent text-2xl">Aroha</span>, a word from the Māori language, is often translated as love—<br />
+                but its meaning runs deeper.<br />
+                It speaks of a relational way of being—<br />
+                one that holds compassion, empathy, presence, and an affectionate connection with oneself, others, and the world.
+              </p>
+              
+              <blockquote className="text-center italic text-2xl text-stone-850 my-8 py-4 border-y border-stone-200/50 max-w-lg mx-auto font-light leading-relaxed">
+                "Aroha is not just something we feel;<br />
+                it is something we live."
+              </blockquote>
+
+              <p>
+                In Sanskrit, a resonant parallel emerges in āroha (आरोह)—<br />
+                meaning ascent, rising, or an upward movement.<br />
+                A quiet unfolding.<br />
+                A becoming.
+              </p>
+              <p className="text-stone-700 font-medium">
+                Together, these meanings hold a shared essence:<br />
+                a movement of the heart—<br />
+                towards connection, towards compassion, towards light.
+              </p>
+              <p>
+                The expressive arts offer a natural pathway for this unfolding.<br />
+                They speak in a language beyond words—<br />
+                engaging the body, the senses, the emotions, and the imagination.
+              </p>
+              <p>
+                Through image, movement, sound, and form,<br />
+                they allow what is often unseen or unspoken<br />
+                to find expression—safely, and with care.<br />
+                In this expression, something begins to transform.
+              </p>
+            </div>
           </div>
 
           {/* Values */}
