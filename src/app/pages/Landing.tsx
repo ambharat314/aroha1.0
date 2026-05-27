@@ -32,7 +32,7 @@ export default function Landing() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="flex flex-col items-center gap-12"
         >
-          <div className="rounded-full bg-white p-12 shadow-2xl flex items-center justify-center">
+          <div className="rounded-full bg-white p-3 shadow-2xl flex items-center justify-center">
             <img
               src={logo}
               alt="Aroha Expressive Arts"

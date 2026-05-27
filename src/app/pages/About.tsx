@@ -171,7 +171,7 @@ export default function About() {
                   <circle cx="100" cy="100" r="95" fill="none" stroke="rgba(241,183,95,0.15)" strokeWidth="0.5" strokeDasharray="3 6" />
                 </svg>
               </motion.div>
-              <div className="w-64 h-64 flex items-center justify-center rounded-full overflow-hidden bg-white shadow-lg border border-stone-100 p-6">
+              <div className="w-64 h-64 flex items-center justify-center rounded-full overflow-hidden bg-white shadow-lg border border-stone-100 p-2">
                 <img src={logo} alt="Aroha Expressive Arts" className="w-full h-full object-contain rounded-full" />
               </div>
             </motion.div>
