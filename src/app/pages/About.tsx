@@ -333,13 +333,13 @@ export default function About() {
       </section>
 
       {/* Collaborations Marquee */}
-      <section className="py-16 bg-stone-50 border-y border-stone-100 overflow-hidden">
+      <section className="py-16 bg-white overflow-hidden">
         <div className="container mx-auto px-6 mb-10 text-center">
           <h3 className="text-3xl text-stone-800 font-light">Past Collabs</h3>
         </div>
         <div className="relative w-full overflow-hidden flex">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-stone-50 to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-stone-50 to-transparent z-10" />
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10" />
           
           <motion.div
             animate={{ x: ["0%", "-50%"] }}
