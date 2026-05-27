@@ -255,32 +255,39 @@ export default function About() {
             <p className="text-stone-500 text-lg font-light">The heart behind Aroha</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-5 gap-12 items-center">
+          <div className="mb-20 overflow-hidden">
             <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="md:col-span-2 relative group flex justify-center items-center"
+              className="text-stone-600 leading-relaxed text-lg"
             >
-              <div className="absolute -inset-3 bg-gradient-to-br from-[#F1B75F]/20 to-[#8E270E]/15 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <div className="relative overflow-hidden rounded-full aspect-square w-72 h-72 md:w-96 md:h-96 shadow-lg group-hover:shadow-2xl transition-shadow duration-500 border-4 border-white">
-                <img
-                  src={vasviProfile}
-                  alt="Vasvi - Expressive Arts Therapist"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
+              {/* Vasvi Image Floated Left on desktop */}
+              <div className="float-left mr-10 mb-6 mt-2 relative hidden md:flex items-center justify-center w-[360px] h-[360px] group">
+                <div className="absolute -inset-3 bg-gradient-to-br from-[#F1B75F]/20 to-[#8E270E]/15 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                <div className="relative overflow-hidden rounded-full aspect-square w-80 h-80 shadow-lg group-hover:shadow-2xl transition-all duration-500 border-4 border-white z-10">
+                  <img
+                    src={vasviProfile}
+                    alt="Vasvi - Expressive Arts Therapist"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
               </div>
-            </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="md:col-span-3"
-            >
-              <div className="space-y-6 text-stone-600 leading-relaxed text-lg">
+              {/* Mobile-only centered Vasvi image (non-floating) */}
+              <div className="md:hidden flex items-center justify-center mb-8 relative w-64 h-64 mx-auto">
+                <div className="absolute -inset-2 bg-gradient-to-br from-[#F1B75F]/15 to-[#8E270E]/10 rounded-full blur-lg pointer-events-none" />
+                <div className="relative overflow-hidden rounded-full aspect-square w-56 h-56 shadow-md border-4 border-white z-10">
+                  <img
+                    src={vasviProfile}
+                    alt="Vasvi - Expressive Arts Therapist"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-6">
                 <p>
                   Vasvi’s journey with mental health and wellbeing began early in life with a deep curiosity about human behaviour, emotions, and the inner world of people. After formal training in psychology and organisational psychology, she spent over seven years in Human Resources and leadership consulting with multinational organisations before returning to the arts — a lifelong source of healing and self-expression — discovering a path that beautifully merged psychology, creativity, and wellbeing.
                 </p>
@@ -295,19 +302,22 @@ export default function About() {
                 </p>
               </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="mt-8 p-8 bg-gradient-to-br from-[#F1B75F]/10 to-[#F1B75F]/5 rounded-3xl border border-[#F1B75F]/15"
-              >
-                <div className="text-4xl text-[#F1B75F]/40 mb-2 font-serif">"</div>
-                <p className="text-stone-700 italic text-lg leading-relaxed">
-                  My work is my sacred calling, and one of my greatest joys is witnessing people light up with childlike wonder as they step into spaces of creativity, imagination, spontaneity, and play. I deeply cherish those breakthrough moments when the creative process opens unexpected pathways — offering fresh insights, new perspectives, and a sense of possibility to those who may have felt stuck, overwhelmed, or disconnected in their everyday lives.
-                </p>
-                <p className="text-stone-900 font-medium mt-4">— Vasvi</p>
-              </motion.div>
+              {/* Centered / clean clearing block for quote */}
+              <div className="clear-both pt-8">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className="p-8 bg-gradient-to-br from-[#F1B75F]/10 to-[#F1B75F]/5 rounded-3xl border border-[#F1B75F]/15 max-w-4xl mx-auto"
+                >
+                  <div className="text-4xl text-[#F1B75F]/40 mb-2 font-serif">"</div>
+                  <p className="text-stone-700 italic text-lg leading-relaxed">
+                    My work is my sacred calling, and one of my greatest joys is witnessing people light up with childlike wonder as they step into spaces of creativity, imagination, spontaneity, and play. I deeply cherish those breakthrough moments when the creative process opens unexpected pathways — offering fresh insights, new perspectives, and a sense of possibility to those who may have felt stuck, overwhelmed, or disconnected in their everyday lives.
+                  </p>
+                  <p className="text-stone-900 font-medium mt-4">— Vasvi</p>
+                </motion.div>
+              </div>
             </motion.div>
           </div>
         </div>
