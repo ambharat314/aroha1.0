@@ -158,9 +158,10 @@ export default function About() {
                 <p>
                   Through image, movement, sound, and form, they allow what is often unseen or unspoken to find expression—safely, and with care. In this expression, something begins to transform.
                 </p>
-                <p className="italic text-stone-500 pt-4">
-                  Or as Stephen K. Levine writes, “Expression is itself transformation. This is the message art brings.”
-                </p>
+              <p className="text-center text-xl md:text-2xl text-stone-500/90 font-light italic mt-12 pt-8 border-t border-stone-100/80 max-w-2xl mx-auto clear-both">
+                Or as Stephen K. Levine writes,<br className="hidden sm:inline" />
+                “Expression is itself transformation. This is the message art brings.”
+              </p>
               </div>
             </motion.div>
           </div>
