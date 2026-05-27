@@ -288,17 +288,26 @@ export default function About() {
               </div>
 
               <div className="space-y-6">
+                {/* Title & Qualifications Header */}
+                <div className="border-b border-stone-100 pb-6 mb-6">
+                  <h3 className="text-3xl text-stone-800 font-light mb-1">Vasvi</h3>
+                  <div className="flex flex-col gap-1 text-stone-500 font-light text-sm mb-4">
+                    <p className="font-medium text-[#8E270E] text-base">Founder — Aroha Expressive Arts</p>
+                    <p className="text-stone-400">Ex Co-Founder — Abhyaantar Healing Arts (2016 - 2026)</p>
+                  </div>
+                  <p className="text-stone-600 font-medium text-base leading-relaxed">
+                    Organisational Psychologist | Certified Intermodal Expressive Arts Therapy Practitioner | Certified Sivananda Yoga Teacher (200 RYT)
+                  </p>
+                </div>
+
                 <p>
-                  Vasvi’s journey with mental health and wellbeing began early in life with a deep curiosity about human behaviour, emotions, and the inner world of people. After formal training in psychology and organisational psychology, she spent over seven years in Human Resources and leadership consulting with multinational organisations before returning to the arts — a lifelong source of healing and self-expression — discovering a path that beautifully merged psychology, creativity, and wellbeing.
+                  Vasvi’s journey with mental health and wellbeing began early in life with a deep curiosity about what drives human behaviour and shapes their inner worlds. After formal training in psychology with a specialisation in organisational psychology, she spent over seven years in Human Resources and leadership consulting with multinational organisations. Eventually, a desire to slow down and reconnect with herself brought her back to the arts — a lifelong source of healing and self-expression — revealing a path that beautifully merged psychology, creativity, and wellbeing.
                 </p>
                 <p>
                   Today, Vasvi is a certified Expressive Arts Therapy Practitioner, Organisational Psychologist, and Yoga Teacher with over a decade of experience facilitating transformative wellbeing spaces for diverse populations across sectors including - education, social impact, and corporates. Through Aroha Expressive Arts, she integrates creative arts with mindfulness, yoga, and nature-based practices to support emotional, mental, somatic, and spiritual wellbeing.
                 </p>
                 <p>
-                  At the heart of Vasvi’s practice is a socially inclusive, trauma-sensitive, queer-affirmative approach rooted in compassion. She creates safe, non-judgemental spaces where individuals, groups, and communities can reconnect with themselves through creativity, play, embodiment, and reflection. Rather than focusing on fixing or diagnosing, Vasvi’s work invites people to access their inner wisdom, cultivate resilience, and rediscover more authentic and meaningful ways of being.
-                </p>
-                <p>
-                  She has immersed herself largely in bringing groups and communities together to facilitate empathy, trust and personal and collective transformation through the expressive arts. It is Vasvi’s belief that in today’s increasingly disconnected and isolating world, where virtual connections may be thriving, yet deep, authentic, meaningful relationships are truly lacking - expressive arts based safe spaces are the need of the hour in order to restore the healing that comes with real, deep human connections.
+                  At the heart of Vasvi’s practice is a socially inclusive, trauma-sensitive approach rooted in compassion. She creates safe, non-judgemental spaces where individuals, groups, and communities can reconnect with themselves through creativity, play, embodiment, and reflection. Rather than focusing on fixing or diagnosing, Vasvi’s work invites people to access their inner wisdom, cultivate resilience, and rediscover more authentic and meaningful ways of being.
                 </p>
               </div>
 
