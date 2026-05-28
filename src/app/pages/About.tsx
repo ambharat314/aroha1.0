@@ -107,22 +107,6 @@ export default function About() {
               viewport={{ once: true }}
               className="text-stone-600 leading-relaxed text-lg"
             >
-              {/* Logo wrapper floated to the right on desktop */}
-              <div className="float-right ml-8 mb-6 relative hidden md:flex items-center justify-center w-72 h-72">
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
-                  className="absolute w-80 h-80 pointer-events-none"
-                >
-                  <svg viewBox="0 0 200 200" className="w-full h-full">
-                    <circle cx="100" cy="100" r="95" fill="none" stroke="rgba(241,183,95,0.15)" strokeWidth="0.5" strokeDasharray="3 6" />
-                  </svg>
-                </motion.div>
-                <div className="w-64 h-64 flex items-center justify-center rounded-full overflow-hidden bg-white shadow-lg border border-stone-100 p-2 relative z-10">
-                  <img src={logo} alt="Aroha Expressive Arts" className="w-full h-full object-contain rounded-full" />
-                </div>
-              </div>
-
               {/* Mobile-only centered logo block (non-floating on mobile) */}
               <div className="md:hidden flex items-center justify-center mb-8 relative w-56 h-56 mx-auto">
                 <motion.div
@@ -146,6 +130,23 @@ export default function About() {
                 <p>
                   Aroha is not just something we feel; it is something we live.
                 </p>
+
+                {/* Logo wrapper floated to the right on desktop (placed here to wrap text above & below) */}
+                <div className="float-right ml-8 mb-6 relative hidden md:flex items-center justify-center w-72 h-72">
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
+                    className="absolute w-80 h-80 pointer-events-none"
+                  >
+                    <svg viewBox="0 0 200 200" className="w-full h-full">
+                      <circle cx="100" cy="100" r="95" fill="none" stroke="rgba(241,183,95,0.15)" strokeWidth="0.5" strokeDasharray="3 6" />
+                    </svg>
+                  </motion.div>
+                  <div className="w-64 h-64 flex items-center justify-center rounded-full overflow-hidden bg-white shadow-lg border border-stone-100 p-2 relative z-10">
+                    <img src={logo} alt="Aroha Expressive Arts" className="w-full h-full object-contain rounded-full" />
+                  </div>
+                </div>
+
                 <p>
                   In Sanskrit, a resonant parallel emerges in āroha (आरोह)—meaning ascent, rising, or an upward movement. A quiet unfolding. A becoming.
                 </p>
@@ -216,43 +217,12 @@ export default function About() {
                 <div className={`absolute inset-0 bg-gradient-to-b ${value.bgColor} rounded-3xl transform group-hover:scale-[1.02] transition-transform duration-300`} />
                 <div className="relative p-10 text-center">
                   <motion.div
-                    animate={{
-                      y: [0, -6, 0],
-                      borderRadius: index === 0 
-                        ? ["60% 40% 30% 70% / 60% 30% 70% 40%", "40% 60% 70% 30% / 50% 60% 40% 50%", "60% 40% 30% 70% / 60% 30% 70% 40%"]
-                        : index === 1
-                        ? ["40% 60% 70% 30% / 50% 60% 40% 50%", "50% 50% 30% 70% / 50% 60% 40% 60%", "40% 60% 70% 30% / 50% 60% 40% 50%"]
-                        : ["50% 50% 30% 70% / 50% 60% 40% 60%", "60% 40% 30% 70% / 60% 30% 70% 40%", "50% 50% 30% 70% / 50% 60% 40% 60%"]
-                    }}
-                    whileHover={{ 
-                      scale: 1.1,
-                      rotate: [0, -10, 10, 0],
-                      transition: { duration: 0.5 }
-                    }}
-                    transition={{
-                      y: {
-                        duration: 5 + index,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                        delay: index * 0.5
-                      },
-                      borderRadius: {
-                        duration: 8 + index * 2,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                        delay: index * 0.3
-                      }
-                    }}
-                    className="inline-flex items-center justify-center w-24 h-24 mb-6 relative overflow-hidden"
-                    style={{
-                      background: `linear-gradient(135deg, ${value.color}, ${
-                        index === 0 ? "#b23e24" : index === 1 ? "#95ac86" : "#f7cf94"
-                      })`,
-                      boxShadow: `0 12px 24px -10px ${value.color}c0, inset 0 -4px 10px rgba(0,0,0,0.15), inset 0 4px 10px rgba(255,255,255,0.25)`,
-                    }}
+                    whileHover={{ rotate: [0, -10, 10, 0] }}
+                    transition={{ duration: 0.5 }}
+                    className="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-6 shadow-lg"
+                    style={{ backgroundColor: value.color }}
                   >
-                    <div className="absolute inset-0 bg-white/15 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-                    <value.icon size={36} className="text-white relative z-10 filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]" />
+                    <value.icon size={32} className="text-white" />
                   </motion.div>
                   <h3 className="text-2xl text-stone-800 mb-4 font-light tracking-wide">{value.title}</h3>
                   <p className="text-stone-600 leading-relaxed">{value.description}</p>
