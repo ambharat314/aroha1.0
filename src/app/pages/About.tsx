@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Link } from "react-router";
 import { useEffect } from "react";
-import { Heart, Leaf, Users, Palette, Move, PenLine, Music } from "lucide-react";
+import { Heart, Leaf, Users, Palette, Move, PenLine, Music, Linkedin } from "lucide-react";
 import logo from "figma:asset/91c1f4056b8afb06da9b380f44ed2fc27d4346d0.png";
 import vasviProfile from "../../assets/vasvi.jpg";
 import company1 from "../../assets/companies/media__1779857952669.png";
@@ -69,7 +69,7 @@ export default function About() {
           className="relative z-10 text-center text-white px-6 max-w-4xl"
         >
 
-          <h1 className="text-6xl md:text-7xl mb-6 font-light tracking-wide">About Aroha</h1>
+          <h1 className="text-6xl md:text-7xl mb-6 font-light tracking-wide">Our Story</h1>
           <p className="text-xl md:text-2xl text-[#F1B75F]/80 font-light italic">
             From roots to bloom, from heart to healing
           </p>
@@ -95,74 +95,63 @@ export default function About() {
               viewport={{ once: true }}
               className="h-1 bg-gradient-to-r from-[#8E270E] to-[#F1B75F] rounded-full mb-8"
             />
-            <h2 className="text-5xl text-stone-800 mb-4 font-light">About Aroha</h2>
-            <p className="text-stone-500 text-lg font-light">The meaning behind the name</p>
+            <h2 className="text-3xl text-stone-800 font-light mb-8">About Aroha</h2>
           </motion.div>
 
-          <div className="mb-20 bg-gradient-to-br from-white to-amber-50/30 p-8 md:p-12 rounded-3xl shadow-lg border border-stone-100">
+          <div className="mb-20">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-stone-600 leading-relaxed text-lg"
+              className="text-stone-800 text-[1.1rem] leading-[1.6] font-light"
             >
-              {/* Mobile-only centered logo block (non-floating on mobile) */}
-              <div className="md:hidden flex items-center justify-center mb-8 relative w-56 h-56 mx-auto">
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
-                  className="absolute w-64 h-64 pointer-events-none"
-                >
-                  <svg viewBox="0 0 200 200" className="w-full h-full">
-                    <circle cx="100" cy="100" r="95" fill="none" stroke="rgba(241,183,95,0.15)" strokeWidth="0.5" strokeDasharray="3 6" />
-                  </svg>
-                </motion.div>
-                <div className="w-48 h-48 flex items-center justify-center rounded-full overflow-hidden bg-white shadow-lg border border-stone-100 p-2 relative z-10">
-                  <img src={logo} alt="Aroha Expressive Arts" className="w-full h-full object-contain rounded-full" />
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-12 lg:gap-20">
+                {/* Left Column: Text */}
+                <div className="flex-1 space-y-8">
+                  <p>
+                    Aroha, a word from the Māori language, is often translated as love—<br />
+                    but its meaning runs deeper.<br />
+                    It speaks of a relational way of being—<br />
+                    one that holds compassion, empathy, presence, and an affectionate<br />
+                    connection with oneself, others, and the world.
+                  </p>
+                  
+                  <p>
+                    Aroha is not just something we feel;<br />
+                    it is something we live.<br />
+                    In Sanskrit, a resonant parallel emerges in āroha (आरोह)—<br />
+                    meaning ascent, rising, or an upward movement.<br />
+                    A quiet unfolding.<br />
+                    A becoming.<br />
+                    Together, these meanings hold a shared essence:<br />
+                    a movement of the heart—<br />
+                    towards connection, towards compassion, towards light.
+                  </p>
+                  
+                  <p>
+                    The expressive arts offer a natural pathway for this unfolding.<br />
+                    They speak in a language beyond words—<br />
+                    engaging the body, the senses, the emotions, and the imagination.<br />
+                    Through image, movement, sound, and form,<br />
+                    they allow what is often unseen or unspoken<br />
+                    to find expression—safely, and with care.<br />
+                    In this expression, something begins to transform.
+                  </p>
+                </div>
+
+                {/* Right Column: Logo */}
+                <div className="shrink-0 flex items-center justify-center md:pt-4">
+                  <div className="w-64 h-64 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] flex items-center justify-center rounded-full overflow-hidden">
+                    <img src={logo} alt="Aroha Expressive Arts" className="w-full h-full object-cover rounded-full" />
+                  </div>
                 </div>
               </div>
 
-              <div className="space-y-6">
-                <p>
-                  <span className="text-[#F1B75F] font-accent text-2xl font-semibold">Aroha</span>, a word from the Māori language, is often translated as love—but its meaning runs deeper. It speaks of a relational way of being—one that holds compassion, empathy, presence, and an affectionate connection with oneself, others, and the world.
-                </p>
-                <p>
-                  Aroha is not just something we feel; it is something we live.
-                </p>
-
-                {/* Logo wrapper floated to the right on desktop (placed here to wrap text above & below) */}
-                <div className="float-right ml-8 mb-6 relative hidden md:flex items-center justify-center w-72 h-72">
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
-                    className="absolute w-80 h-80 pointer-events-none"
-                  >
-                    <svg viewBox="0 0 200 200" className="w-full h-full">
-                      <circle cx="100" cy="100" r="95" fill="none" stroke="rgba(241,183,95,0.15)" strokeWidth="0.5" strokeDasharray="3 6" />
-                    </svg>
-                  </motion.div>
-                  <div className="w-64 h-64 flex items-center justify-center rounded-full overflow-hidden bg-white shadow-lg border border-stone-100 p-2 relative z-10">
-                    <img src={logo} alt="Aroha Expressive Arts" className="w-full h-full object-contain rounded-full" />
-                  </div>
-                </div>
-
-                <p>
-                  In Sanskrit, a resonant parallel emerges in āroha (आरोह)—meaning ascent, rising, or an upward movement. A quiet unfolding. A becoming.
-                </p>
-                <p className="text-stone-700 font-medium">
-                  Together, these meanings hold a shared essence: a movement of the heart—towards connection, towards compassion, towards light.
-                </p>
-                <p>
-                  The expressive arts offer a natural pathway for this unfolding. They speak in a language beyond words—engaging the body, the senses, the emotions, and the imagination.
-                </p>
-                <p>
-                  Through image, movement, sound, and form, they allow what is often unseen or unspoken to find expression—safely, and with care. In this expression, something begins to transform.
-                </p>
-              <p className="text-center text-xl md:text-2xl text-stone-500/90 font-light italic mt-12 pt-8 border-t border-stone-100/80 max-w-2xl mx-auto clear-both">
-                Or as Stephen K. Levine writes,<br className="hidden sm:inline" />
-                “Expression is itself transformation. This is the message art brings.”
-              </p>
+              {/* Bottom Quote */}
+              <div className="mt-16 text-center text-stone-800">
+                <p className="mb-2">Or as Stephen K. Levine writes,</p>
+                <p>“Expression is itself transformation. This is the message art brings.”</p>
               </div>
             </motion.div>
           </div>
@@ -264,49 +253,47 @@ export default function About() {
               viewport={{ once: true }}
               className="text-stone-600 leading-relaxed text-lg"
             >
-              {/* Vasvi Image Floated Left on desktop */}
-              <div className="float-left mr-10 mb-6 mt-2 relative hidden md:flex items-center justify-center w-[360px] h-[360px] group">
-                <div className="absolute -inset-3 bg-gradient-to-br from-[#F1B75F]/20 to-[#8E270E]/15 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-                <div className="relative overflow-hidden rounded-full aspect-square w-80 h-80 shadow-lg group-hover:shadow-2xl transition-all duration-500 border-4 border-white z-10">
-                  <img
-                    src={vasviProfile}
-                    alt="Vasvi - Expressive Arts Therapist"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-              </div>
-
-              {/* Mobile-only centered Vasvi image (non-floating) */}
-              <div className="md:hidden flex items-center justify-center mb-8 relative w-64 h-64 mx-auto">
-                <div className="absolute -inset-2 bg-gradient-to-br from-[#F1B75F]/15 to-[#8E270E]/10 rounded-full blur-lg pointer-events-none" />
-                <div className="relative overflow-hidden rounded-full aspect-square w-56 h-56 shadow-md border-4 border-white z-10">
-                  <img
-                    src={vasviProfile}
-                    alt="Vasvi - Expressive Arts Therapist"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                {/* Title & Qualifications Header */}
-                <div className="border-b border-stone-100 pb-6 mb-6">
-                  <h3 className="text-3xl text-stone-800 font-light mb-1">Vasvi</h3>
-                  <div className="flex flex-col gap-1 text-stone-500 font-light text-sm mb-4">
-                    <p className="font-medium text-[#8E270E] text-base">Founder — Aroha Expressive Arts</p>
-                    <p className="text-stone-400">Ex Co-Founder — Abhyaantar Healing Arts (2016 - 2026)</p>
+              <div className="flex flex-col md:flex-row gap-10 mb-6">
+                {/* Left Column: Vasvi Image & LinkedIn */}
+                <div className="flex flex-col items-center shrink-0">
+                  <div className="relative flex items-center justify-center w-64 h-64 md:w-[360px] md:h-[360px] group">
+                    <div className="absolute -inset-3 bg-gradient-to-br from-[#F1B75F]/20 to-[#8E270E]/15 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                    <div className="relative overflow-hidden rounded-full aspect-square w-full h-full shadow-lg group-hover:shadow-2xl transition-all duration-500 border-4 border-white z-10">
+                      <img
+                        src={vasviProfile}
+                        alt="Vasvi - Expressive Arts Therapist"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
                   </div>
-                  <p className="text-stone-600 font-medium text-base leading-relaxed">
-                    Organisational Psychologist | Certified Intermodal Expressive Arts Therapy Practitioner | Certified Sivananda Yoga Teacher (200 RYT)
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="mt-6 text-stone-400 hover:text-[#0a66c2] transition-colors duration-300">
+                    <Linkedin size={28} />
+                  </a>
+                </div>
+
+                {/* Right Column: Title and first two paragraphs */}
+                <div className="flex-1 space-y-6">
+                  {/* Title & Qualifications Header */}
+                  <div className="mb-6">
+                    <div className="flex flex-col gap-1 text-stone-500 font-light text-sm mb-4">
+                      <p className="font-medium text-stone-700 text-xl">Founder - Aroha Expressive Arts</p>
+                    </div>
+                    <p className="text-stone-700 text-sm md:text-base leading-relaxed">
+                      Organisational Psychologist | Intermodal Expressive Arts Therapy Practitioner |<br className="hidden md:block" /> Sivananda Yoga Teacher (200 RYT)
+                    </p>
+                  </div>
+
+                  <p>
+                    Vasvi’s journey with mental health and wellbeing began early in life with a deep curiosity about what drives human behaviour and shapes their inner worlds. After formal training in psychology with a specialisation in organisational psychology, she spent over seven years in Human Resources and leadership consulting with multinational organisations. Eventually, a desire to slow down and reconnect with herself brought her back to the arts — a lifelong source of healing and self-expression — revealing a path that beautifully merged psychology, creativity, and wellbeing.
+                  </p>
+                  <p>
+                    Today, Vasvi is a certified Expressive Arts Therapy Practitioner, Organisational Psychologist, and Yoga Teacher with over a decade of experience facilitating transformative wellbeing spaces for diverse populations across sectors including - education, social impact, and corporates. Through Aroha Expressive Arts, she integrates creative arts with mindfulness, yoga, and nature-based practices to support emotional, mental, somatic, and spiritual wellbeing.
                   </p>
                 </div>
+              </div>
 
-                <p>
-                  Vasvi’s journey with mental health and wellbeing began early in life with a deep curiosity about what drives human behaviour and shapes their inner worlds. After formal training in psychology with a specialisation in organisational psychology, she spent over seven years in Human Resources and leadership consulting with multinational organisations. Eventually, a desire to slow down and reconnect with herself brought her back to the arts — a lifelong source of healing and self-expression — revealing a path that beautifully merged psychology, creativity, and wellbeing.
-                </p>
-                <p>
-                  Today, Vasvi is a certified Expressive Arts Therapy Practitioner, Organisational Psychologist, and Yoga Teacher with over a decade of experience facilitating transformative wellbeing spaces for diverse populations across sectors including - education, social impact, and corporates. Through Aroha Expressive Arts, she integrates creative arts with mindfulness, yoga, and nature-based practices to support emotional, mental, somatic, and spiritual wellbeing.
-                </p>
+              {/* Full width third paragraph */}
+              <div className="space-y-6">
                 <p>
                   At the heart of Vasvi’s practice is a socially inclusive, trauma-sensitive approach rooted in compassion. She creates safe, non-judgemental spaces where individuals, groups, and communities can reconnect with themselves through creativity, play, embodiment, and reflection. Rather than focusing on fixing or diagnosing, Vasvi’s work invites people to access their inner wisdom, cultivate resilience, and rediscover more authentic and meaningful ways of being.
                 </p>
@@ -319,13 +306,15 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
                   viewport={{ once: true }}
-                  className="p-8 bg-gradient-to-br from-[#F1B75F]/10 to-[#F1B75F]/5 rounded-3xl border border-[#F1B75F]/15 max-w-4xl mx-auto"
+                  className="py-12 px-8 bg-[#FDF9EA] rounded-[2rem] max-w-[90%] mx-auto"
                 >
-                  <div className="text-4xl text-[#F1B75F]/40 mb-2 font-serif">"</div>
-                  <p className="text-stone-700 italic text-lg leading-relaxed">
-                    My work is my sacred calling, and one of my greatest joys is witnessing people light up with childlike wonder as they step into spaces of creativity, imagination, spontaneity, and play. I deeply cherish those breakthrough moments when the creative process opens unexpected pathways — offering fresh insights, new perspectives, and a sense of possibility to those who may have felt stuck, overwhelmed, or disconnected in their everyday lives.
+                  <p className="text-stone-800 text-center text-lg leading-relaxed max-w-4xl mx-auto">
+                    “My work is my sacred calling, and one of my greatest joys is witnessing people light up with childlike wonder as they step into spaces of creativity, imagination, spontaneity, and play. I deeply cherish those breakthrough moments when the creative process opens unexpected pathways — offering fresh insights, new perspectives, and a sense of possibility to those who may have felt stuck, overwhelmed, or disconnected in their everyday lives.”
                   </p>
-                  <p className="text-stone-900 font-medium mt-4">— Vasvi</p>
+                  <div className="text-stone-800 text-center mt-6">
+                    <span className="block text-xl">~</span>
+                    <span className="block font-medium mt-1">Vasvi</span>
+                  </div>
                 </motion.div>
               </div>
             </motion.div>
@@ -334,13 +323,13 @@ export default function About() {
       </section>
 
       {/* Collaborations Marquee */}
-      <section className="py-16 bg-stone-50 border-y border-stone-100 overflow-hidden">
+      <section className="py-16 bg-[#F5EDE4] border-y border-stone-200/30 overflow-hidden">
         <div className="container mx-auto px-6 mb-10 text-center">
           <h3 className="text-3xl text-stone-800 font-light">Past Collabs</h3>
         </div>
         <div className="relative w-full overflow-hidden flex">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-stone-50 to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-stone-50 to-transparent z-10" />
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#F5EDE4] to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#F5EDE4] to-transparent z-10" />
           
           <motion.div
             animate={{ x: ["0%", "-50%"] }}
