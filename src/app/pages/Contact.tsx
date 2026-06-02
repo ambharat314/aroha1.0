@@ -80,7 +80,7 @@ export default function Contact() {
 
             <div className="space-y-5">
               {[
-                { icon: Mail, label: "Email", content: contactData?.email || "info@arohaarts.com", href: `mailto:${contactData?.email || "info@arohaarts.com"}`, color: "#8E270E" },
+                { icon: Mail, label: "Email", content: contactData?.email || "vasvi@arohaexpressivearts.com", href: `mailto:${contactData?.email || "vasvi@arohaexpressivearts.com"}`, color: "#8E270E" },
                 { icon: Phone, label: "Phone", content: contactData?.phone || "(555) 123-4567", href: `tel:${contactData?.phone || "+15551234567"}`, color: "#798C6C" },
                 { icon: MapPin, label: "Location", content: contactData?.address || "Mumbai, India", href: contactData?.mapLink || "#", color: "#F1B75F" },
               ].map((item, index) => {
@@ -112,7 +112,7 @@ export default function Contact() {
             <div>
               <h3 className="text-xl text-stone-800 mb-5 font-light">Follow Our Journey</h3>
               <div className="flex gap-3">
-                <motion.a href="https://instagram.com/arohaexpressivearts" target="_blank" rel="noopener noreferrer"
+                <motion.a href="https://instagram.com/aroha.expressive.arts" target="_blank" rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -3 }}
                   className="p-3.5 rounded-xl bg-gradient-to-br from-[#F1B75F] to-[#e5a030] text-white shadow-lg shadow-[#F1B75F]/25 transition-colors"
                 >

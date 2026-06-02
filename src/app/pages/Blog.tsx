@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { BookOpen, ExternalLink } from "lucide-react";
+import blogVideo from "../../assets/MVI_3510-1.mp4";
 
 export default function Blog() {
   // Replace with your Medium username or publication name
@@ -8,8 +9,24 @@ export default function Blog() {
   return (
     <div className="bg-white">
       {/* Hero */}
-      <section className="relative py-24 text-center overflow-hidden">
-        <div className="absolute inset-0 bg-[#F1B75F]/10" />
+      <section className="relative py-32 text-center overflow-hidden min-h-[50vh] flex flex-col justify-center">
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source
+            src={blogVideo}
+            type="video/mp4"
+          />
+        </video>
+        
+        {/* Dark Overlay for text contrast */}
+        <div className="absolute inset-0 bg-stone-900/60" />
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -20,10 +37,10 @@ export default function Blog() {
             animate={{ rotate: [0, 5, -5, 0] }}
             transition={{ duration: 6, repeat: Infinity }}
           >
-            <BookOpen className="w-14 h-14 text-[#F1B75F] mx-auto mb-6" />
+            <BookOpen className="w-14 h-14 text-[#F1B75F] mx-auto mb-6 drop-shadow-md" />
           </motion.div>
-          <h1 className="text-6xl md:text-7xl text-stone-800 mb-6 font-light tracking-wide">Blog</h1>
-          <p className="text-xl text-stone-600 max-w-2xl mx-auto font-light">
+          <h1 className="text-6xl md:text-7xl text-white mb-6 font-light tracking-wide drop-shadow-lg">Blog</h1>
+          <p className="text-xl text-white/95 max-w-2xl mx-auto font-light drop-shadow-md">
             Reflections on creativity, healing, and the transformative journey of art
           </p>
         </motion.div>

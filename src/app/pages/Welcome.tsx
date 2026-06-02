@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { useNavigate } from "react-router";
 import { useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
-import logo from "figma:asset/91c1f4056b8afb06da9b380f44ed2fc27d4346d0.png";
+import logo from "../../assets/new-log.png.jpeg";
 
 export default function Welcome() {
   const navigate = useNavigate();
@@ -118,31 +118,7 @@ export default function Welcome() {
           transition={{ duration: 1.8, delay: 0.2, type: "spring", bounce: 0.25 }}
           className="relative mb-8"
         >
-          {/* Animated glow ring */}
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-            className="absolute inset-0 -m-10"
-          >
-            <svg viewBox="0 0 200 200" className="w-full h-full">
-              <defs>
-                <linearGradient id="ring-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="rgba(241,183,95,0.3)" />
-                  <stop offset="50%" stopColor="rgba(121,140,108,0.2)" />
-                  <stop offset="100%" stopColor="rgba(142,39,14,0.25)" />
-                </linearGradient>
-              </defs>
-              <circle
-                cx="100"
-                cy="100"
-                r="95"
-                fill="none"
-                stroke="url(#ring-gradient)"
-                strokeWidth="0.5"
-                strokeDasharray="4 8"
-              />
-            </svg>
-          </motion.div>
+
 
           {/* White circle backdrop */}
           <div className="absolute inset-0 -m-6">
@@ -159,7 +135,7 @@ export default function Welcome() {
               />
             </svg>
           </div>
-          <div className="relative rounded-full overflow-hidden w-64 h-64 md:w-72 md:h-72 flex items-center justify-center bg-white shadow-lg">
+          <div className="relative rounded-full overflow-hidden w-72 h-72 md:w-80 md:h-80 flex items-center justify-center bg-white shadow-lg">
             <img src={logo} alt="Aroha Expressive Arts" className="w-full h-full object-cover rounded-full" />
           </div>
         </motion.div>
@@ -171,7 +147,7 @@ export default function Welcome() {
           whileHover={{ scale: 1.06, boxShadow: "0 12px 40px rgba(0,0,0,0.3)" }}
           whileTap={{ scale: 0.96 }}
           onClick={() => navigate("/home")}
-          className="group relative px-12 py-4 rounded-full text-lg font-primary font-medium tracking-[0.3em] transition-all duration-500 overflow-hidden"
+          className="group relative px-12 py-4 mt-32 rounded-full text-lg font-primary font-medium tracking-[0.3em] transition-all duration-500 overflow-hidden"
           style={{
             background: "rgba(255,255,255,0.12)",
             backdropFilter: "blur(12px)",

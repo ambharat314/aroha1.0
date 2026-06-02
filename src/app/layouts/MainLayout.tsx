@@ -2,7 +2,7 @@ import { Outlet, Link, useLocation } from "react-router";
 import { useState, useEffect } from "react";
 import { Menu, X, Heart, ChevronDown, ArrowUp, Instagram, Linkedin, Mail } from "lucide-react";
 import { motion, AnimatePresence, useScroll, useTransform } from "motion/react";
-import logo from "figma:asset/91c1f4056b8afb06da9b380f44ed2fc27d4346d0.png";
+import logo from "../../assets/new-log.png.jpeg";
 
 export default function MainLayout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -365,7 +365,7 @@ export default function MainLayout() {
                 {/* Social Icons */}
                 <div className="flex gap-3">
                   <a
-                    href="https://instagram.com/arohaexpressivearts"
+                    href="https://instagram.com/aroha.expressive.arts"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2.5 rounded-full bg-white/10 hover:bg-[#F1B75F] text-white transition-all duration-300 hover:scale-110"
@@ -381,7 +381,7 @@ export default function MainLayout() {
                     <Linkedin size={18} />
                   </a>
                   <a
-                    href="mailto:info@arohaarts.com"
+                    href="mailto:vasvi@arohaexpressivearts.com"
                     className="p-2.5 rounded-full bg-white/10 hover:bg-[#8E270E] text-white transition-all duration-300 hover:scale-110"
                   >
                     <Mail size={18} />
@@ -418,9 +418,9 @@ export default function MainLayout() {
               <div>
                 <h3 className="text-white mb-5 tracking-wide text-sm font-medium uppercase">Connect</h3>
                 <div className="flex flex-col gap-3 text-sm text-stone-400">
-                  <a href="mailto:info@arohaarts.com" className="hover:text-[#F1B75F] transition-colors flex items-center gap-2">
+                  <a href="mailto:vasvi@arohaexpressivearts.com" className="hover:text-[#F1B75F] transition-colors flex items-center gap-2">
                     <Mail size={14} />
-                    info@arohaarts.com
+                    vasvi@arohaexpressivearts.com
                   </a>
                 </div>
 
